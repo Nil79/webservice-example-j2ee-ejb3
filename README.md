@@ -18,13 +18,13 @@ The project exposes one simple EJB (EchoWebServiceBean) that implements the remo
 Usage
 -------------------------
 
-To build the Maven project use the following command:
+To build the Maven project and deploy use the following command:
 
-	mvn clean install
+	mvn clean package jboss-as:deploy
 	
-Note that it's not necessary to build the project with the dependencies. Otherwise create an EAR package with the needed dependencies (in example using thirdy part libraries).
-
 The project references the JBoss AS 7.1.1 Final runtime libraries, so to deploy the project on other application servers change the dependencies in pom.xml file.
 
+I haven't tested with other versions of JBoss AS.
+
 After the project has been deployed, just open your web browser and open the following url:
-http://localhost:8080/webservice-example-j2ee-ejb3-1.0-SNAPSHOT/EchoWS/EchoWebServiceBean?wsdl
+http://localhost:8080/wsexample/EchoWS/EchoWebServiceBean?wsdl
